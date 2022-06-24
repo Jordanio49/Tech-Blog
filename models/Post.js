@@ -11,23 +11,26 @@ Post.init(
             primaryKey:true,
             autoIncrement: true
         },
-        title: {
+        postTitle: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_url: {
+        postContent: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isURL: true
-            }
+            unique: true  
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER,
             reference: {
                 model: 'user',
                 key: 'id'
             }
+        },
+        dateCreated: {
+            type: DataTypes.DATEONLY,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
         }
     },
     {
