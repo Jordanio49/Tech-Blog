@@ -11,31 +11,30 @@ Post.init(
             primaryKey:true,
             autoIncrement: true
         },
-        postTitle: {
+        title: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        postContent: {
+        post_text: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true  
+            unique: true,
+            validate: {
+                len: [1]
+            } 
         },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER,
             reference: {
                 model: 'user',
                 key: 'id'
             }
-        },
-        dateCreated: {
-            type: DataTypes.DATEONLY,
-            allowNull: false,
-            defaultValue: DataTypes.NOW
         }
     },
     {
         sequelize,
         freezeTableName: true,
+        timeStamps: true,
         underscored: true,
         modelName: 'post'
     }
