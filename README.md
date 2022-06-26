@@ -12,7 +12,7 @@
   5. [Questions](#questions)
   
   ## Installation Instructions
-  To install clone the repository and open in vs code. Run npm install to install the dependencies, then using sql you can source the schema.sql. After that you can run the seeds. Finally you should be good to start up the server and checkout the site on localhost.
+  To install clone the repository and open in vs code. Run npm install to install the dependencies, then using sql you can source the schema.sql. After that you can run the seeds. Finally you should be good to start up the server and checkout the site on localhost. You can also run it via Heroku by clicking [here](https://jordan-thomas-tech-blog.herokuapp.com/).
 
   ## Usage Information
   Tech blog is a place where users can get together and post information that interests them. It also will allow the users to comment on each others posts. 
